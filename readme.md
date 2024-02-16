@@ -323,7 +323,54 @@ E->ID<br>
 
 The function takes three arguments, two arrays and one integer. It returns an integer value.
 
+ 
+Let H be a binary min-heap consisting of n elements implemented as an array. What is the worst-Case time complexity of an optimal algorithm to find the maximum element in H?<br>
+Ans : Theta of log N  
+
+Syntax error : Syntax Analyzer 
+Lexical environment error: Lexical analyzer
+Semantic analysis error: Semantics analyzer
+Machine-dependant optimizations: Machine dependent optimizer
 
 # POINTERS:
 
+
+#include <stdio.h><br>
+int main(){
+    
+int arr[4][5];<br>
+int i,j;<br>
+for(i=0;i<4;i++)<br>
+{
+  for (j=0;j<5;j++){
+ 
+ arr[i][j] = 10*i+j;
+
+  }
+
+}
+
+printf("%d",*(arr[1]+9));
+
+return 0;
+}
+Explanation:
+
+arr[1]+9 = *(arr+1) + 9 //arr is again a pointer but to the 2D array arr[4][5]
+ 
+arr+1 = arr + sizeof(*arr)
+
+      = arr + 5 * sizeof (int)
+     
+*(arr+1)+9 = arr + 5 * sizeof(int) + sizeof(**arr) * 9
+
+//* operator in *(arr+1) just changes the type of the pointer here
+        
+        = arr + 5 * sizeof(int) + 9 * sizeof(int)
+        
+        = arr + 14 * sizeof(int)
+        
+        14/5=2 and 14%5=4
+
+        ans=10*2+4=24
 
