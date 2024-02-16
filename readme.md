@@ -256,7 +256,7 @@ Theta notation represents both an upper bound ("upper limit") and a lower bound 
 "Theta of g(n)= {f(n): there exist positive constants c1,c2 and n0 such that 0<=c1*g(n)<=f(n)<=c2*g(n) for all n>n0}"
 
 This means that f(n)=theta of(g(n)),if there are positive constants n0 and c such that , to the right of n0 and c such that , to the right of n0 the f(n)  always lies on or above c1*g(n) and below c2*g(n).
-
+ 
 3.**Omega Notation**:
 
 Omega Notation specifies the asymptotic lower bound for function f(n). For a given function g(n), Omega of (g(n)) is denoted by:
