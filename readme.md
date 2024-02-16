@@ -264,3 +264,4 @@ Omega Notation specifies the asymptotic lower bound for function f(n). For a giv
 Ω (g(n)) = {f(n): there exist positive constants c and n0 such that 0 ≤ c*g(n) ≤ f(n) for all n ≥ n0}. 
 
 This means that, f(n) = Ω(g(n)), If there are positive constants n0 and c such that, to the right of n0 the f(n) always lies on or above c*g(n).
+
