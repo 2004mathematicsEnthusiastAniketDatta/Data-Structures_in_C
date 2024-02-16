@@ -261,7 +261,69 @@ This means that f(n)=theta of(g(n)),if there are positive constants n0 and c suc
 
 Omega Notation specifies the asymptotic lower bound for function f(n). For a given function g(n), Omega of (g(n)) is denoted by:
 
-Ω (g(n)) = {f(n): there exist positive constants c and n0 such that 0 ≤ c*g(n) ≤ f(n) for all n ≥ n0}. 
+Ω (g(n)) = {f(n): there exist positive constants c and n0 such that  c*g(n) >= f(n) for all n ≥ n0}. 
 
 This means that, f(n) = Ω(g(n)), If there are positive constants n0 and c such that, to the right of n0 the f(n) always lies on or above c*g(n).
+
+# SPACE COMPLEXITY:
+
+The space complexity of an algorithm is the amount of space required to solve a problem and produce an output. Similar to the space complexity , space complexity is also expressed as big o notation.
+
+space complexity=Auxillary space + input size
+Space Complexity includes two types:
+1. **Constant Space**: The space required does not grow with an increase in input
+2. **Non-Constant space**
+
+1. Suppose that L1 is a Regular language and L2 is a context-free language. L1 intersection L2 is regular and context-free language.L1.L2 is Regular and context-free if there is no dependency among L1 and L2. L1-L2 is not necessarily  context-free. L1 U L2 is either Regular or Context-free Language.
+
+2. let P be an array containing an integers let t be the lowest upper bound on the number of comparisons of the array elements required to find the minimum and maximum values in arbitrary array of n elements which of the following choices is correct
+
+Tournament Method Problem
+
+3. The sequence of procedure calls corresponds to a pre order
+traversal of the activation tree .
+4. The sequence of procedure calls corresponds to a post order
+traversal of the activation tree .
+4. (210)3 =(21)10=(15)6
+
+5. Every SLR(1) grammar is unambiguous but there are certain unambiguous grammars which are not in SLR(1)
+
+6. For already sorted array , Insertion sort does the minimum number of comparisons.
+
+7. If a binary search tree contains 'n' distinct elements , The time complexity of picking an element in T that is smaller than maximum element in T is O(1) keeping the maximum element in the Tree T only in the right subtree and the second largest element in the tree at the root of the tree. 
+
+8. exit() , sleep() functions is the standard C library function that will always invoke a system call when executed from single-threaded process in a UNIX/Linux operating system.
+
+9. Creation of a new file in foo , Renaming of an existing file in foo requires a full scan of foo for successful completion.
+
+10. In an undirected connected plane graph G, there are eight vertices and five faces . The number of edges in G is Eleven to eleven.
+
+11. consider the following grammar (that admits a series of declarations , followed by expressions) and the associated syntax directed translation actions , given as pseudo-code:
+
+P-> D*E*<br>
+D->int ID (record that ID.lexeme is of type int)<br>
+D->bool ID(record that ID.lexeme  is of type bool)<br>
+E->E1+E2<br>
+E->!E1<br>
+E->ID<br>
+ 
+ The actions can be used to type-check syntactically correct integer variable declarations and integer expression
+
+ 12. Code :
+ int simpleFunction(int y[], int n ,int x)
+ {
+    int total=Y[0],loopIndex;
+    for (loopIndex=1;loopIndex<=n-1;loopIndex++)
+    {
+        total=x*total+(y[loopIndex]);
+    }
+    return total;
+ } 
+ Let Z be an array of 10 elements with Z[i]=1 for all i such that 0<=i<=9.The value returned by SimpleFunction(Z,10,2) is 1023 
+
+The function takes three arguments, two arrays and one integer. It returns an integer value.
+
+
+# POINTERS:
+
 
