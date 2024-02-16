@@ -374,3 +374,5 @@ arr+1 = arr + sizeof(*arr)
 
         ans=10*2+4=24
 
+check out uninitialized pointers in the code if any
+
