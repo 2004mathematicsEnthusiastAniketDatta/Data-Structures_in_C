@@ -373,3 +373,7 @@ arr+1 = arr + sizeof(*arr)
 
 check out uninitialized pointers in the code if any
 
+**arr=arr[0][0];<br>
+arr[i][j]=\*[arr[i]+j];<br>
+arr[i][j]=\*[\*(arr+i)+j];
+
