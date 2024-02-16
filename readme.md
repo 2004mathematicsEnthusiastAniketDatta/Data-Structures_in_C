@@ -327,10 +327,7 @@ The function takes three arguments, two arrays and one integer. It returns an in
 Let H be a binary min-heap consisting of n elements implemented as an array. What is the worst-Case time complexity of an optimal algorithm to find the maximum element in H?<br>
 Ans : Theta of log N  
 
-Syntax error : Syntax Analyzer 
-Lexical environment error: Lexical analyzer
-Semantic analysis error: Semantics analyzer
-Machine-dependant optimizations: Machine dependent optimizer
+
 
 # POINTERS:
 
