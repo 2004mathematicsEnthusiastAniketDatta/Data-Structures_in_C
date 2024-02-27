@@ -1,0 +1,11 @@
+The abstract Data Type of Array is :   Operations with Functions 
+int arr[Max_Size];
+int arr[10] = {0,1,2,3,4,5,6,7,8,9};
+pass by reference 
+int arr[100];
+int i;
+printf("Element:")
+for (i=0; i<100; i++){
+    scanf ("%d",&arr[i]);
+}
+static 
