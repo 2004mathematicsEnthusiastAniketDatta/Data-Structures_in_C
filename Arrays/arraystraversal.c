@@ -13,7 +13,7 @@ void main()
         printf("element - %d : ", i);
         scanf("%d", &arr[i]);
     }
-    arr[10]=int(malloc(10*sizeof(int)));
+//    arr[10]=int(malloc(10*sizeof(int)));
     printf("\nElements in array are: ");
     for (i = 0; i < 10; i++)
     {
