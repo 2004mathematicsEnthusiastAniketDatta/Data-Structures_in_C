@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1707161416 source:c:\users\aniket\downloads\data-structures-and-algorithms-main\data-structures-and-algorithms-main\c\data-structures\arrays\sorting techniques inexam\insertion_sort\insertionsort\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<math.h>
+	<stdbool.h>
+	<string.h>
+
