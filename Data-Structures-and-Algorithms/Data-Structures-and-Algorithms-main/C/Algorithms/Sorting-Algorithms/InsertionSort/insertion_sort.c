@@ -6,10 +6,10 @@
       vector: array to be sorted
       n: size of the array to be sorted
 */
-
+typedef int size_t;
 int insertion(int vector[], int n) {
-
-  for (size_t i = 1; i < n; i++) {
+size_t i=1;
+  for (i = 1; i < n; i++) {
 
     int num = vector[i]; // holds the value to be sorted
     int aux = i;         // holds the index
@@ -37,9 +37,9 @@ int main() {
 
   int *vector = malloc(n * sizeof(int)); // allocted the memory necessary to
                                          // hold the max value of the array (n).
-
+   size_t x;
   // get the elements from the user
-  for (size_t i = 0; i < n; i++) {
+  for (x= 0; x < n; x++) {
 
     printf("Type the %d element: ", i);
     scanf("%d", &vector[i]);

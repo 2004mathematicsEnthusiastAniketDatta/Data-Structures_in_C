@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #define swap(t, x, y) t z = x; x = y; y = z;
 typedef int TYPE;
-void bubble_sort(TYPE [], int);
+void bubble_sort(TYPE [], int); 
 void print_array(TYPE [], int);
 
 int main(){
