@@ -1,116 +1,84 @@
-#include<stdio.h>
-#define MAX 50
- struct stack {
-  int a[MAX];
-  int top;
- }s;
+// C code to implement above approach
+#include <stdio.h>
+#include <stdlib.h>
 
+// Globally declared visited array
+int vis[100];
 
-  void init()
-  {
+// Graph structure to store number
+// of vertices and edges and
+// Adjacency matrix
+struct Graph {
+	int V;
+	int E;
+	//Array of Adjacency List
+	int** Adj;
+};
 
-      s.top=-1;
-  }
-  int isempty()
-  {
-
-      if(s.top==-1)
-      {
-
-          return 1;
-      }
-      else{
-        return 0;
-      }
-  }
-  int isfull()
-  {
-
-      if(s.top==MAX-1)
-      {
-
-          return 1;
-      }
-      else{
-        return 0;
-      }
-  }
-
-   void push(int num)
-   {
-       s.top++;
-       s.a[s.top]=num;
-
-   }
-   int pop()
-   {
-
-     int v;
-     v=s.a[s.top];
-     s.top--;
-   }
-
-   void dfs(int g[20][20],int n)
-   {
-        int visited[20]={0};
-        int i,flag=0;
-         push(0);
-         printf("%d\t",s.top);
-         visited[s.top]=1;
-        while(!isempty())
-        {
-            flag=0;
-
-           for(i=0;i<n;i++)
-           {
-
-             if(g[s.top][i]==1&&visited[i]==0)
-             {
-                  push(i);
-                  visited[i]=1;
-                  printf("%d\t",i);
-                  flag=1;
-                  break;
-             }
-
-
-           }
-            if(flag==0)
-             {
-
-                 pop();
-             }
-        }
-
-   }
-  int main()
+// Function to input data of graph
+struct Graph* adjMatrix()
 {
-    init();
+	struct Graph* G = (struct Graph*)
+		malloc(sizeof(struct Graph));
+	if (!G) {
+		printf("Memory Error\n");
+		return NULL;
+	}
+	G->V = 7;
+	G->E = 7;
 
-    int g[20][20],i,j,n;
-    printf("\n enter the  number of vertices");
-    scanf("%d",&n);
-    for(i=0;i<n;i++)
-    {
+	G->Adj = (int**)malloc((G->V) * sizeof(int*));
+	for (int k = 0; k < G->V; k++) {
+		G->Adj[k] = (int*)malloc((G->V) * sizeof(int));
+	}
 
-        for(j=0;j<n;j++)
-        {
+	for (int u = 0; u < G->V; u++) {
+		for (int v = 0; v < G->V; v++) {
+			G->Adj[u][v] = 0;
+		}
+	}
+	G->Adj[0][1] = G->Adj[1][0] = 1;
+	G->Adj[0][2] = G->Adj[2][0] = 1;
+	G->Adj[1][3] = G->Adj[3][1] = 1;
+	G->Adj[1][4] = G->Adj[4][1] = 1;
+	G->Adj[1][5] = G->Adj[5][1] = 1;
+	G->Adj[1][6] = G->Adj[6][1] = 1;
+	G->Adj[6][2] = G->Adj[2][6] = 1;
 
-            scanf("%d",&g[i][j]);
+	return G;
+}
 
-        }
-    }
-      for(i=0;i<n;i++)
-      {
-          for(j=0;j<n;j++)
-          {
+// DFS function to print DFS traversal of graph
+void DFS(struct Graph* G, int u)
+{
+	vis[u] = 1;
+	printf("%d ", u);
+	for (int v = 0; v < G->V; v++) {
+		if (!vis[v] && G->Adj[u][v]) {
+			DFS(G, v);
+		}
+	}
+}
 
-              printf("%d\t",g[i][j]);
-          }
-          printf("\n");
-      }
+// Function for DFS traversal
+void DFStraversal(struct Graph* G)
+{
+	for (int i = 0; i < 100; i++) {
+		vis[i] = 0;
+	}
+	for (int i = 0; i < G->V; i++) {
+		if (!vis[i]) {
+			DFS(G, i);
+		}
+	}
+}
 
-      dfs(g,n);
-      return 0;
+// Driver code
+int main()
+{
+	struct Graph* G;
+	G = adjMatrix();
+	DFStraversal(G);
+	return 0;
 }
 
