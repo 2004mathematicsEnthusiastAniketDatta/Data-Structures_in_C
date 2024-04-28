@@ -6,7 +6,7 @@
 int n; // Number of cities
 int cost[MAX_N][MAX_N]; // Cost matrix
 int dp[1 << MAX_N][MAX_N]; // Dynamic programming table
-
+       //[2^(MAX_N)]
 int tsp(int mask, int pos) {
     if (mask == (1 << n) - 1) {
         return cost[pos][0]; // Return to the starting city
@@ -30,7 +30,6 @@ int tsp(int mask, int pos) {
 int main() {
     printf("Enter the number of cities: ");
     scanf("%d", &n);
-
     printf("Enter the cost matrix:\n");
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
