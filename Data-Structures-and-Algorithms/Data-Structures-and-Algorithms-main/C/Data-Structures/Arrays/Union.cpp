@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 void next_distinct(int arr[], int size, int* x)
 {
 	/* Moving to next distinct element */
