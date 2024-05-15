@@ -7,21 +7,21 @@ int maxWater(int arr[], int n) {
 
     // Initialize result
     int res = 0;
-
+    int i;
     // Fill left array
     left[0] = arr[0];
-    for (int i = 1; i < n; i++) {
+    for (i = 1; i < n; i++) {
         left[i] = (arr[i] > left[i - 1]) ? arr[i] : left[i - 1];
     }
 
     // Fill right array
     right[n - 1] = arr[n - 1];
-    for (int i = n - 2; i >= 0; i--) {
+    for (i = n - 2; i >= 0; i--) {
         right[i] = (arr[i] > right[i + 1]) ? arr[i] : right[i + 1];
     }
 
     // Calculate the accumulated water element by element
-    for (int i = 0; i < n; i++) {
+    for (i = 0; i < n; i++) {
         res += ((left[i] < right[i]) ? left[i] : right[i]) - arr[i];
     }
 
@@ -35,7 +35,8 @@ int main() {
     scanf("%d", &n);
     int arr[n];
     printf("Enter the elements of the array:\n");
-    for (int i = 0; i < n; i++) {
+    int i;
+    for (i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
     }
     printf("Maximum water that can be stored is %d\n", maxWater(arr, n));

@@ -56,6 +56,13 @@ void printArray(int A[], int size)
 
     printf("\n");
 }
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <limits.h>
+
+// ... (rest of your code)
+
 int main()
 {
     int size;
@@ -68,15 +75,28 @@ int main()
     {
         scanf("%d", &arr[i]);
     }
+
+    clock_t start, end;
+    double cpu_time_used;
+     
+    start = clock();
  
     mergeSort(arr, 0, size - 1);
  
+    end = clock();
+    cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
+
     printf("The sorted array is: ");
     for (int i = 0; i < size; i++)
     {
         printf("%d ", arr[i]);
     }
     printf("\n");
+
+    printf("Running time of the program is: %f seconds\n", cpu_time_used);
+    printf("Space complexity of the program is: O(n)\n");
+
     return 0;
 }
+
 
