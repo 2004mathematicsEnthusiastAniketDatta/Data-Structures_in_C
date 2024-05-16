@@ -40,6 +40,6 @@ int main() {
         scanf("%d", &arr[i]);
     }
     printf("Maximum water that can be stored is %d\n", maxWater(arr, n));
-    return 0;
+     return 0;
 }
 
