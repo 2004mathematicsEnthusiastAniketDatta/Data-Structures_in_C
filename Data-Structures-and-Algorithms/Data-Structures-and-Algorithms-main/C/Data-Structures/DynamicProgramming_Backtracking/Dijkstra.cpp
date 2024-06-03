@@ -32,7 +32,7 @@ int main() {
     scanf("%d", &source);
 
     dijkstra(&g, source);
-
+    
     return 0;
 }
 
